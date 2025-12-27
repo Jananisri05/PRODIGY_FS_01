@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body 
+{
+    font-family: Arial;
+    background: #f5f5f5;
+    padding: 40px;
+}
+.container 
+{
+    width: 300px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #ccc;
+}
+button 
+{
+    width: 100%;
+    padding: 10px;
+    background: #2196F3;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover { background: #0b7dda; }
+a { display:block; text-align:center; margin-top:10px; }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Login</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <a href="/signup/">Create an account</a>
+</div>
+</body>
+</html>
